@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>fullPage.js plugin by Alvaro Trigo</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage plugin by Alvaro Trigo. Create full screen pages fast and simple" />
+	<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full" />
+	<meta name="Resource-type" content="Document" />
+
+	<script type="text/javascript" src="//use.typekit.net/xpy7utd.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="stylesheets/example.css" />
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+	
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+	<script type="text/javascript" src="../movieClip.js"></script>
+	
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			var clip01 = new movieClip({
+				selector: '#box01',
+				frameRate: 24,
+				width: 350,
+				max: 114
+			});
+
+			var clickNum = 0;
+			jQuery('#section1').on('click', '#box01', function (e) {
+				if (clickNum==0) {
+					clip01.play({start:1, end:24});
+				} else if (clickNum==1) {
+					clip01.play({start:24, end:35});
+				} else if (clickNum==2) {
+					clip01.play({start:36, end:114});
+				}
+				clickNum = (clickNum==2)? 0: clickNum+1;
+			});
+
+
+
+			var clip02 = new movieClip({
+				selector: '#box02',
+				frameRate: 30,
+				height: 140,
+				max: 97
+			});
+
+			jQuery('#section2').on('mouseover', '#box02', function (e) {
+				clip02.play();
+			});
+
+			jQuery('#section2').on('mouseout', '#box02', function (e) {
+				clip02.play({speed:-4});
+			});
+
+
+
+			var clip03 = new movieClip({
+				selector: '#box03',
+				frameRate: 30,
+				height: 290,
+				max: 107
+			});
+	
+			jQuery('#section2').on('mouseover', '#box03', function (e) {
+				clip03.play({});
+			});
+		
+			jQuery('#section2').on('mouseout', '#box03', function (e) {
+				clip03.play({speed:-4});
+			});
+
+
+
+
+			var clip04 = new movieClip({
+				selector: '#box04',
+				frameRate: 24,
+				width: 0,
+				height: 300,
+				max: 100
+			});
+			var goodbyeleng = 0;
+
+			jQuery('#btns').on('click', '.btn1', function (e) {
+				clip04.play({start:1});
+			});
+
+			jQuery('#btns').on('click', '.btn2', function (e) {
+				clip04.play({start:1, end:20});
+			});
+
+			jQuery('#btns').on('click', '.btn3', function (e) {
+				clip04.play({start:20, end:40});
+			});
+
+			jQuery('#btns').on('click', '.btn4', function (e) {
+				clip04.play({start:40, end:55});
+			});
+
+			jQuery('#btns').on('click', '.btn5', function (e) {
+				clip04.play({start:55, end:70, callback: callme, callbackParam:[55,70]});
+			});
+
+			jQuery('#btns').on('click', '.btn6', function (e) {
+				goodbyeleng = 0;
+				clip04.play({start:70, end:94, callback: callme2});
+			});
+
+			jQuery('#btns').on('click', '.btn7', function (e) {
+				clip04.play({start:40, end:55, callback: callme3});
+			});
+
+			function callme(param){
+				clip04.play({start:param[0], end:param[1]});
+			}
+			
+			function callme2(){
+				if(goodbyeleng>2){
+					clip04.play({start:94, end:100});
+				}else{
+					clip04.play({start:76, end:94, callback: callme2});
+					goodbyeleng++;
+				}
+			}
+			
+			function callme3(){
+				clip04.play({start:1, end:20, callback: callme4});
+			}
+			
+			function callme4(){
+				clip04.play({start:20, end:40});
+			}
+
+
+			$.fn.fullpage({
+				slidesColor: ['#ffffff', '#f2f2f2', '#ffffff', '#f2f2f2', '#ffffff', '#f2f2f2'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', 'lastPage'],
+		        scrollingSpeed: 700,
+		        easing: 'easeOutQuint',
+		        controlArrowColor: 'rgb(230, 230, 230)'
+			});
+
+		});
+	</script>
+
+</head>
+<body>
+	
+
+
+
+<div class="section active" id="section0">
+	<h1 class="eng">movieClip.js</h1>
+	<p>javascript 에서 키프레임 에니메이션 구현을 위한 javascript 프로젝트 입니다.</p>
+</div>
+
+<div class="section" id="section1">
+	<h1 class="eng">1. Introduction</h1>
+	<p>애니메이션이 적용된 이미지를 순차적으로 보여주는 원리 입니다.</p>
+	<div id="box01" class="box"></div>
+</div>
+
+<div class="section" id="section2">
+    <div class="slide active">
+    	<h1 class="eng">2. Example</h1>
+		<h2>게임 시작 버튼</h2>
+		<div id="box02" class="box"></div>
+    </div>
+    <div class="slide">
+    	<h1 class="eng">2. Example</h1>
+		<h2>동영상 미리보기</h2>
+		<div id="box03" class="box"></div>
+    </div>
+    <div class="slide">
+    	<h1 class="eng">2. Example</h1>
+		<h2>캐릭터 컨트롤</h2>
+		<div id="box04" class="box"></div>
+		<div id="btns">
+			<button class="btn2">고개 까딱</button>
+			<button class="btn3">경례</button>
+			<button class="btn4">점프</button>
+			<button class="btn5">댄스 댄스</button>
+			<button class="btn6">안녕</button>
+			<button class="btn7">점프 하고 고개까딱 하고 경례</button>
+			<button class="btn1">all play</button>
+		</div>
+    </div>
+</div>
+
+<div class="section" id="section3">
+	<h1 class="kor">3. 장점</h1>
+	<ul>
+		<li>플래시 배재로 단순해진 웹페이지 내에서 보다 나은 사용자 경험 제공을 위한 하나의 방법</li>
+		<li>모든 디바이스 및 브라우저에 적용 가능</li>
+		<li>간단한 사용법</li>
+		<li>단방향 애니메이션이 아닌 프레임 사이를 자유롭게 오갈 수 있음</li>
+	</ul>
+</div>
+
+<div class="section" id="section4">
+	<h1 class="kor">4. 주의할 점</h1>
+	<ul>
+		<li>지나치게 길거나 큰 사이즈의 이미지 사용하면 브라우저에 부하를 가져올 수 있음</li>
+		<li>1초당 24 프레임 이상이면 부드러운 모션 효과를 보여줌. 그이하는 좀 부자연스러울 수 있음</li>
+	</ul>
+</div>
+
+<div class="section" id="section5">
+	<h1 class="eng">end</h1>
+</div>
+
+
+</body>
+</html>
+
+
+
+
