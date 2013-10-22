@@ -1,6 +1,6 @@
-## **MovieClip.js Project**
+## **MovieClip-js Project**
 
-- `javascript`에서 키프레임 에니메이션 구현을 위한 **javascript 프로젝트** 입니다.
+- `javascript` 키프레임 에니메이션 구현을 위한 **javascript 프로젝트** 입니다.
   
   
 ### **Sample page**
