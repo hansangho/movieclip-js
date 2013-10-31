@@ -1,6 +1,6 @@
-## **MovieClip-js Project**
+## **MovieClip.js Project**
 
-- `javascript` 키프레임- 에니메이션 구현을 위한 **javascript 프로젝트** 입니다.
+- `javascript`에서 키프레임 에니메이션 구현을 위한 **javascript 프로젝트** 입니다.
   
   
 ### **Sample page**
@@ -8,6 +8,7 @@
 - [영상배너 sample page][samplepage2]
 - [캐릭터 애니 sample page][samplepage4]
 - [기능구현 sample page][samplepage3]
+- [소개 ppt][ppt]
 
 ---
 ### **Usage**
@@ -75,8 +76,9 @@ clip.stop({end:30}); // 30프레임으로 이동후 정지
   
 
 
-[samplepage1]: http://legobbs.korea.ncsoft.corp/w/hsh/movieclip-js/gameStart.html
-[samplepage2]: http://legobbs.korea.ncsoft.corp/w/hsh/movieclip-js/videoPreview.html
-[samplepage3]: http://legobbs.korea.ncsoft.corp/w/hsh/movieclip-js/movieclip_sample.html
-[samplepage4]: http://legobbs.korea.ncsoft.corp/w/hsh/movieclip-js/charactorControl.html
+[samplepage1]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/gameStart.html
+[samplepage2]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/videoPreview.html
+[samplepage3]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/movieclip_sample.html
+[samplepage4]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/characterControl.html
+[ppt]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/example.html#firstPage
 
