@@ -1,9 +1,4 @@
-/**
- * @preserve @author : ncsoft
- * @date : 2013.09.26
- * @lastUpdate : 2013.09.30 : hansangho
- */
-
+/* update: 2013-11-08 11:21:30 AM */
 ;(function (global, $) {
 	
     global.movieClip = function (options) {

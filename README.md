@@ -1,10 +1,15 @@
+[![build status](http://plat-lego.korea.ncsoft.corp:7777/projects/38/status.png?ref=master)](http://plat-lego.korea.ncsoft.corp:7777/projects/38?ref=master)
+
 ## **MovieClip.js Project**
 
 - `javascript`에서 키프레임 에니메이션 구현을 위한 **javascript 프로젝트** 입니다.
   
   
 ### **Sample page**
-- [게임시작 sample page][samplepage1]
+- [게임시작 sample Lineage2][samplepage1]
+- [게임시작 sample Aion -v1][samplepage5]
+- [게임시작 sample Aion -v2][samplepage6]
+- [게임시작 sample Aion -v3][samplepage7]
 - [영상배너 sample page][samplepage2]
 - [캐릭터 애니 sample page][samplepage4]
 - [기능구현 sample page][samplepage3]
@@ -80,5 +85,8 @@ clip.stop({end:30}); // 30프레임으로 이동후 정지
 [samplepage2]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/videoPreview.html
 [samplepage3]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/movieclip_sample.html
 [samplepage4]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/characterControl.html
+[samplepage5]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/gameStart1.html
+[samplepage6]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/gameStart2.html
+[samplepage7]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/gameStart3.html
 [ppt]: http://plat-lego.korea.ncsoft.corp/!/uikit/movieclip-js/examples/example.html#firstPage
 

@@ -8,9 +8,6 @@
 	<meta name="description" content="fullPage plugin by Alvaro Trigo. Create full screen pages fast and simple" />
 	<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full" />
 	<meta name="Resource-type" content="Document" />
-
-	<script type="text/javascript" src="//use.typekit.net/xpy7utd.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
 	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/example.css" />
@@ -26,7 +23,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
 	
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="js/movieClip.js"></script>
+	<script type="text/javascript" src="js/movieClip.min.js"></script>
 	
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
@@ -202,20 +199,24 @@
 </div>
 
 <div class="section" id="section3">
-	<h1 class="kor">3. 장점</h1>
+	<h1 class="kor">3. 특징 및 장점</h1>
 	<ul>
-		<li>플래시 배재로 단순해진 웹페이지 내에서 보다 나은 사용자 경험 제공을 위한 하나의 방법</li>
+		<li>플래시 배재로 정적인 웹페이지 내에서 보다 나은 사용자 경험 제공을 위한 하나의 방법</li>
+		<li>컨텐츠의 주목도 향상</li>
 		<li>모든 디바이스 및 브라우저에 적용 가능</li>
-		<li>간단한 사용법</li>
-		<li>단방향 애니메이션이 아닌 프레임 사이를 자유롭게 오갈 수 있음</li>
+		<li>단방향 애니메이션이 아닌 유저의 컨트롤에 의한 상호작용이 가능 (ex:해골 캐릭터 컨트롤, 구글두들)</li>
+		<li>개발자 : 간단한 사용법</li>
 	</ul>
 </div>
 
 <div class="section" id="section4">
-	<h1 class="kor">4. 주의할 점</h1>
+	<h1 class="kor">4. 주의할 점과 한계</h1>
 	<ul>
-		<li>지나치게 길거나 큰 사이즈의 이미지 사용하면 브라우저에 부하를 가져올 수 있음</li>
-		<li>1초당 24 프레임 이상이면 부드러운 모션 효과를 보여줌. 그이하는 좀 부자연스러울 수 있음</li>
+		<li>지나치게 길거나 큰 사이즈의 이미지 사용하면 브라우저에 부하를 가져옴</li>
+		<li>이미지 용량 : 작고 색상수가 적으며 움직임이 적을수록 작은 용량을 차지함</li>
+		<li>24fps~36fps : 1초당 24 프레임 이상이면 부드러운 모션 효과를 보여줌</li>
+		<li>플래시를 사용한 모션보다 작업 과정이 길고 복잡해짐</li>
+		<li>( 디자인.영상작업 -> 플래시작업 -> 이미지변환 -> javascript작업 )</li>
 	</ul>
 </div>
 
